@@ -1,0 +1,3 @@
+@function px($value) {
+  @return $value * 5px;
+}

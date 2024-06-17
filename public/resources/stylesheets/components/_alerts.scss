@@ -1,0 +1,93 @@
+.alert {
+    background-color: $col_red;
+    height: 2.5rem;
+    @include flex-left;
+    border: 0.1rem solid $col_red2; 
+    color:$font_w1;
+    border-radius: 1rem;
+    margin: 0 0 0.9rem 0;
+    padding: 0 0 0 0.5rem;
+    font-weight: 700;
+    font-size: 1.1em;
+    width: 16.5rem;
+}
+
+.alert-success {
+    height: 2rem;
+    @include flex-left;
+    color: $font_w1;
+    border-radius: 0.5rem;
+    margin: 0 0 2rem 0;
+    padding: 0.9rem;
+    font-weight: 700;
+    font-size: 1.3em;
+    width: 24rem;
+    border: 0.5rem solid $green3;
+    background-color: $green1;
+}
+
+.alert2 {
+    height: 2.5rem;
+    @include flex-left;
+    border-left: 0.5rem solid $col_red2;
+    border: 0.1rem solid $col_red;
+    color: $font_w;
+    background-color: $red_transp;
+    border-radius: 1rem;
+    padding: 0 0 0 1rem;
+    font-weight: 700;
+    font-size: 1.1em;
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+.icon-alert2 {
+  margin: 0 1rem 0 0;
+}
+
+.icon-alert {
+    margin: 0 1rem 0 0;
+    color: 0.5rem solid $green2;
+}
+
+//alert for the visitor
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    z-index: 2;
+  }
+    
+  .modal-header {
+    padding: 20px;
+    border-radius: 5px;
+    margin: 40%;
+    background-color: $font_w; 
+    color: font_b; 
+    align-items: center;
+    i {
+      font-size: px(10);
+    }
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    color: $font_b4;
+  }
+  
+  .close-modal {
+    height: 30px;
+    width: 30px;
+    margin: 0 0 16% 55.5%;
+    background-color: $font_w;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+    color: font_b; /* o tu color deseado */
+  }

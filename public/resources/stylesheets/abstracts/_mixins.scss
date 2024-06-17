@@ -1,0 +1,81 @@
+$breakpoint_xl: 1250px;
+$breakpoint_tb: 800px;
+
+
+@mixin tablet {
+  @media only screen and (max-width: $breakpoint_xl) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: $breakpoint_tb) {
+    @content;
+  }
+}
+
+@mixin line($border) {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: $border;
+}
+
+@mixin posicion-absolute($top, $left, $translate) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translateY($translate);
+}
+
+@mixin posicion-relative($top, $right, $bottom, $left) {
+  position: relative;
+  margin: $top $right $bottom $left;
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-grid() {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-left() {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+@mixin nav() {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 13px;
+}
+
+@mixin card() {
+  border: $bor_card; 
+  color: $font_w1;
+  background-color: $section-font;
+}
+
+@mixin comments() {
+  > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
+  }
+  & p{
+    padding: px(2);
+    color: $font_w;
+    background-color: $font_b2;
+    border: 1px solid $font_w;
+    border-radius: px(2);
+    font-size: px(3);
+  }
+}

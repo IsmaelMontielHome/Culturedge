@@ -1,0 +1,150 @@
+.user-view-wrapper {
+  background-image: $back_img4;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover; 
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: monospace;
+  @include flex-center;
+  min-height: auto;
+  padding: 0 1.3rem;
+}
+
+.user-view-container {
+  height: 58em;
+  width: 100em;
+  display: flex; 
+  box-shadow: $box-shadow;
+  overflow: hidden;
+  border: 3px solid $tone_wl;
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+	animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+.left {
+  @include flex-center;
+  flex-direction: column;
+  width: 55%;
+  background: $tone_wl;
+  backdrop-filter: blur(30px);
+  border-radius: 0 30% 20% 0;
+  transition: border-radius .3s;
+}
+
+.featured-words {
+  text-align: center;
+  color:$font_w;
+  width: 480px;
+  font-size: 22px;
+
+  span {
+    font-weight: 800;
+  }
+}
+
+.right {
+  border-radius: 0 0.9rem 0.9rem 0;
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.box-small {
+  display: flex;
+  justify-content: right;
+  gap: 5px;
+
+  .forgot {
+    text-decoration: none;
+    color: $font_w;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 400;
+
+    &:hover {
+      font-weight: 600;
+    }
+  }
+}
+
+.btn-sign {
+  @include flex-center;
+  gap: 10px;
+  width:100%;
+  height: 55px;
+  padding: 0 15px;
+  border-radius: 0.3rem;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: $brow3;
+  color: $font_w;
+  border: none;
+  margin: 30px 0;
+  transition: .3s;
+
+  &:hover {
+    color: $font_w;
+    background-color: $brow4;
+    gap: 15px;
+  }
+}
+
+.register2 {
+  gap: 10px;
+  color: $font_w;
+  font-size: 1.2rem;
+  margin-top: 50px;
+  @include flex-center;
+  font-weight: 600;
+}
+
+.principal {
+  padding: 1vw 4vw; 
+  border-radius: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transition: .3s;
+}
+
+.slogan {
+  font-size: 33px;
+  color: $brow1;
+  margin: 40px 0 20px 0;
+  font-weight: 600;
+  color: $font_w;
+}
+
+.form-inputs {
+  Width: 100%;
+}
+
+@include mobile {
+  .user-view-container {
+    width: 400px;
+  }
+
+  .left {
+      display: none;
+  }
+
+  .right {
+      width: 100%;
+  }
+}

@@ -1,0 +1,216 @@
+.user-input {
+    position: relative;
+
+    & > .icon {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        color: $font_w;
+    }
+
+    &-group {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+    
+        .icon {
+            color: $font_b1;
+            font-size: 2em;
+            padding: 5px 0;
+        }
+    }
+}
+
+.boxicon {
+    font-size: 24px;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+
+        i {
+            background-color: $brow0;
+            border-radius: 10px;
+        }
+    }
+
+    i {
+        padding: 8px;
+
+        &:first-child {
+            margin-top: 4px;
+        }
+
+        &:last-child {
+            margin-bottom: 4px;
+        }
+    }
+
+    &-drawer {
+        background-color: $font_w;
+        border-radius: 15px;
+        box-shadow: $shadowVeri;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(45px, auto));
+        max-height: 10em;
+        max-width: 100%;
+        overflow: auto;
+        position: absolute;
+        transition: display 0.2s;
+        width: 25em;
+        z-index: 100;
+
+
+        &.hidden {
+            display: none;
+        }
+
+        &-button {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+
+            p {
+                margin-left: auto;
+            }
+
+            i {
+                font-size: 1.5em;
+
+                &:not(.selector) {
+                    margin-right: auto;
+                    padding: 0 8px;
+                }
+            }
+        }
+
+        &-container.user-input {
+            position: initial;
+        }
+
+        &::webkit-scrollbar {
+            width: 5px;
+
+            &-thumb {
+                background-color: $font_b1;
+                border-radius: 10px;
+            }
+
+            &-track {
+                background-color: $font_w;
+            }
+        }
+    }
+}
+
+.input:focus + .form_label,
+.input:not(:placeholder-shown) + .form_label {
+    transform: translateY(-35px) scale(1.1);
+    transform-origin: left top;
+    color: $font_w;
+    font-weight: 600;
+}
+
+.form_label {
+    color: $font_w;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    left: 9px;
+    transform: translateY(10px);
+    transition: transform .5s, $font_w.3s;
+    font-size: 15px;
+}
+
+.input {
+    width: 100%;
+    height: 55px;
+    padding: 0 15px;
+    margin: 20px 0;
+    color: $font_w;
+    background: $inputRegis;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    backdrop-filter: blur(20px);
+    box-shadow: $shadowVeri;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: $font_family_inputs;
+
+    &__pswdWeak {
+        background-color: $red_transp;
+    }
+    &__pswdMedium {
+        background-color: $yel_transp;
+    }
+    &__pswdStrong {
+        background-color: $grn_transp;
+    }
+    &__pswdnotMatch {
+        background-color: $red_transp;
+    }
+    &__pswdMatch { 
+        background-color: $grn_transp;
+    }
+}
+
+//verify
+.inputs {
+    width: 12.8%;
+    height: 56px;
+    text-align: center;
+    border: none;
+    background: $inputveri;
+    margin: 0 0.35rem 1.5rem 0;
+    border-radius: 0.3rem;
+    font-size: 1.8em;
+
+    &:focus {
+        background-color: $green1;
+        border: 0.1rem solid $green2;
+        outline: none;
+    }
+
+    &::placeholder {
+        color: $veriHover;
+    }
+}
+
+.profile_input {
+    width: 100%;
+    height: 45px;
+    padding: 0 15px;
+    margin: 10px 0;
+    color: $font_b3;
+    border: none;
+    /* border: 1px solid rgba(114, 114, 114, 0.39); */
+    background-color: rgba(114, 114, 114, 0.144);
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Google Sans, -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: normal;
+    color: #414141;
+
+    &:active, &:focus {
+        border: 2px solid blue;
+    }
+}
+
+.description_user {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 15px;
+    border: none;
+    background-color: rgba(114, 114, 114, 0.144);
+    border-radius: 8px;
+    font-weight: 500;
+    color: #414141;
+
+    font-family: Google Sans, -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: normal;
+}

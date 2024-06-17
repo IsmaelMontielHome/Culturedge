@@ -1,0 +1,288 @@
+a {
+  text-decoration: none ;
+  color: $font_b4;
+}
+.box {
+  padding: px(4);
+  border-radius: px(2); 
+  max-width: 80%;
+  box-shadow: 0 0 5px $font_w2; 
+  color: $font_b4;
+  background-color: $section-font;
+  text-align: center;
+  margin: 20px auto;
+  
+  h2 {
+    color: $font_b;
+  }
+
+  a {
+    text-decoration: none ;
+    color: $font_b;
+  }
+}
+
+.user_card {
+  display: flex;
+  align-items: center;
+  font-size: px(4) ;  
+  
+  .user-card-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .profile-card {
+    text-align: start;
+    cursor: pointer;
+    &:hover {
+      color: $theme_bl;
+    }
+  }
+
+  &-info {
+    display: flex;
+  }
+
+  &-post_theme {
+    margin-left: auto;
+  }
+}
+
+.date {
+  color: $font_b;
+  font-size: px(3);
+  text-align: start;
+}
+
+.line {
+  @include line($border);
+}
+
+.text {
+  text-align: left;
+  padding-bottom: 10px;
+  > p {
+    font-size: 18px ;
+  }
+}
+
+
+@include mobile {
+  .hidden {
+    display: none;
+  }
+
+  .modal .modal-content{
+    margin-top: 50%;
+    > img {
+      height: 200px;
+    }
+  }
+  
+}
+
+@media (min-width:800px) {
+  .text p.hidden_{
+    display: none ;
+  }
+  
+}
+
+.image-preview {
+  position: relative;
+}
+
+.image-preview img {
+  max-width: 90%;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 2px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.image img {
+  max-width: 90%; 
+  height: 350px;
+  cursor: pointer;
+  border-radius: px(2); 
+}
+
+.likes {
+  display: flex;
+  justify-content: flex-start; 
+}
+
+.actions {
+  margin: 0 0 0 auto;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  font-size: px(4);
+  padding: 0 25px 0 25px;
+  
+  & > a {
+    text-decoration: none;
+  }
+
+  .likes {
+    margin: px(4) 0 10px 0; 
+    order: -1;
+    font-size: px(3);
+    
+    > img {
+      width: 20px;
+      height: 20px;
+      padding-right: 5px;
+    }
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    font-size: px(3);
+    > p {
+      margin: px(4) 10px 10px 0; 
+    }
+  }
+
+  p {
+    margin: 0; 
+    cursor: pointer;
+    font-weight: bold;
+    &:hover {
+      color: $theme_bl; 
+    }
+  }
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  margin: 10% auto;
+  padding: 20px;
+  width: 50%;
+
+  & > img {
+    width: 90%;
+    height: 350px;
+    border-radius: px(2);
+  }
+
+  h1, p {
+    color: $font_w;
+  }
+}
+ 
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+  
+  &:hover,
+  &:focus{
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.comments-none {
+  display: none;
+}
+
+.comments {
+  font-size: px(4);
+  text-align: left;
+  overflow-y: auto; 
+  max-height: 300px;
+
+  .users {
+    display: flex;
+    text-align: left;
+    width: 100%;
+    @include comments();
+  }
+  
+  .comment-show {
+    display: flex;
+    justify-content: flex-end; 
+    @include comments();
+  }
+
+  > p {
+    margin-right: px(3); 
+  }
+}
+
+.user-comment {
+  display: flex;
+  align-items: center;
+  font-size: px(4) ;
+  color: $font_w;
+  background-color: $font_b2;
+  border-radius: px(2);
+  width: 100%;
+  font-size: px(3);
+
+  > input.comment[type="text"] {
+    color: $font_w;
+    background-color: $font_b2;
+    border: 1px solid $font_b2;
+    border-radius: px(2);
+    width: 100%;
+    font-size: px(3);
+    padding: 10px;
+    outline: none;
+  }
+}
+
+.hoverbox-result {
+  margin-left: 20%;
+  padding: 0;
+  width: 35%;
+  position: fixed;
+  z-index: 5;
+}
+
+.box-result {
+  border: solid 1px $font_w2;
+  padding: px(4);
+  max-width: 80%;
+  color: $font_b4;
+  background-color: $section-font;
+  text-align: center;
+  
+  h2 {
+    color: $font_b;
+  }
+
+  a {
+    text-decoration: none ;
+    color: $font_b;
+  }
+}

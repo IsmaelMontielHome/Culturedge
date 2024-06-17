@@ -1,0 +1,164 @@
+//back_image
+$back_img: url(./../../resources/img/background_prin.svg);
+
+//whitesb(119, 9, 9)
+//back_image
+$back_img2: url(./../../resources/img/login4.gif);
+
+$back_img3: url(./../../resources/img/login.png);
+
+$back_img4: url(./../../resources/img/R.jpeg);
+
+
+$cover_profile: url(./../../resources/img/cover_profile.jpg);
+
+//whitesb(119, 9, 9)
+$font_w: white;
+$font_w1: #ccc;
+$font_w2:rgb(177, 157, 157);
+$font_w3: #fcf9ea;
+
+//grays
+$gray_1: #929292;
+$gray_2: #858585;
+$gray_3: #979797;
+
+//theme
+$theme_bl: #1f381c;
+$font_w3: #fcf9ea;
+
+//grays
+$gray_1: #929292;
+
+//blacks:
+$font_b: black;
+$font_b1: #1B1717;
+$font_b2: #262525;
+$font_b3: #000;
+
+//border
+$bor_fond: 0px 2px 4px rgba(0, 0, 0, 0.5);
+$border: 1px solid #ccc;
+$bor_card:2px solid rgba(255, 255, 255, 0.5);
+
+//page
+$primary-color: #080808;
+$prin_color: rgb(18, 18, 18);
+
+//box
+$box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+$shadowVeri: 0 0 10px rgba(0,0,0,0.2);
+$shadowTable: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+$shadowButton: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.07) 0 1px 1px, rgba(0, 0, 0, 0.07) 0 2px 2px, rgba(0, 0, 0, 0.07) 0 4px 4px;
+$shadowBox: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+$shadowTable2: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+//input
+$backinput: #dddddd4b;
+$inputRegis: rgba(255,255,255,0.2);
+$inputveri: #0000001e;
+$veriHover: rgba(0, 0, 0, 0.226);
+
+//pallette_1
+$brow0: rgba(245, 236, 183, 0.96);
+$brow1: #905818;
+$brow2: #b4791a;
+$brow3: #78461b;
+$brow4: #3b1e0d;
+$brow5: #673b1c;
+
+//pallete_code_veri
+$green1: #0cb16134;
+$green2: #0cb162;
+$green3: #5bec64;
+$green4: rgba(91, 236, 101, 0.479);
+$green5: #269b49;
+$border1: #d2d2d2;
+$input_back: #00000013;
+$placeholder_1: rgba(0, 0, 0, 0.156);
+
+//alert_danger
+$col_red: #2c0202;
+$col_red2: rgb(139, 0, 0);
+
+$red_transp: rgba(211, 12, 12, 0.486);
+$yel_transp: rgba(236, 240, 22, 0.486);
+$grn_transp: rgba(81, 182, 14, 0.651);
+
+//semaforo
+$col_red3: #b11010;
+$col_yel: #f3eb51;
+
+//whites
+$font_w: white;
+$font_w1: #ccc;
+$font_w2:rgb(177, 165, 165);
+$font_w3: #d8dfd9;
+$font_w4: #cccccc;
+$font_w5: #e2e2e2;
+$font_6: rgb(242, 242, 242);
+
+//blacks:
+$font_b: black;
+$font_b1: #161414;
+$font_b2: #262525;
+$font_b3: #000;
+$font_b4: #0c0a0a;
+
+$col_red: red;
+$theme_bl: #7380ec;
+$font_g: green;
+
+
+//border
+$bor_fond: 0px 2px 4px rgba(0, 0, 0, 0.5);
+$border: 1px solid $font_b;
+$bor_card:2px solid $font_b2;
+
+//transitions
+$tr:background-color 0.3s, color 0.3s;
+
+$font_w4: #ffffff;
+$font_w5: rgb(248, 248, 248);
+$font_w6: #dfdfdf;
+$font_bl1: #41e9bfd8;
+$font_bl2: #060c3d;
+
+//Bordes
+$body-font: #F3F3F3;
+$section-font: #FCF6F4;
+$font-text: #696564;
+$font-hover: #BEF4FE;
+$font-txhover: #005242;
+
+//theme light
+$font_light: #7380ec;
+$font_light2: #ff7782;
+$font_light3: #09c3c3;
+$font_light4: #ffbb55;
+$font_light5: #fff;
+$font_light6: #7d8da1;
+$font_light7: #dce1eb;
+$font_light8: #363949;
+$font_light9: rgba(132,139,200, 0.18); 
+$font_light10: #111e88;
+$font_light11: #f6f6f9;
+$font_light12: #00ab88;
+
+//theme for user-forms
+$tone_wl: rgba(255,255,255,0.3);
+$tone_gH: #263238;
+$tone_gre: #c8ff00;
+
+$data-color1: #FF6978;
+$data-color2: #FF8811;
+$data-color3: #5973E6;
+$data-color4: #15616D;
+$data-color5: #390040;
+$data-color6: #00ab88;
+$data-color7: #294ce7;
+
+$back_color1: rgb(53, 53, 53);
+
+
+$font_family_inputs: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;

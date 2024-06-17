@@ -1,0 +1,4 @@
+# eliminate all other files
+*
+# do not eliminate this gitignore file
+!.gitignore

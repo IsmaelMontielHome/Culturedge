@@ -1,0 +1,146 @@
+.back {
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    color: $font_w;
+
+    &:hover{
+        color: $font_w;
+    }
+}
+
+.slogan-reg {
+    font-size: 33px;
+    color: $brow1;
+    margin: 20px 0 20px 0;
+    font-weight: 600;
+    color: $font_w;
+}
+
+.new {
+    color: $font_w;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: $brow3;
+
+    &:hover {
+        color: $font_w;
+        background-color: $brow4;
+
+    }
+}
+
+.datasign {
+    gap: 10px;
+    color: $font_w;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    @include flex-center;
+    font-weight: 600;
+}
+
+.option2 {
+    @include flex-center;
+    margin: 2rem 0 1rem 0;
+}
+
+.signup {
+    border: none;
+    @include flex-center;
+    height: 2.8rem;
+    border-radius: 0.5rem;
+    font-size: 1em;
+    width: 22rem;
+    max-width: 90%;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: $brow3;
+    color: $font_w;
+
+    &:hover {
+        color: $font_w;
+        background-color: $brow4;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background-color: #aaa;
+    }
+}
+
+.btn-create {
+    @include flex-center;
+    position: absolute;
+}
+
+.password-strength {
+    position: absolute;
+    bottom: -5px;
+    font-size: 15px;
+    font-weight: 800;
+    display: none;
+
+    &__pswdWeak {
+        color: #b11010;
+        margin: 0 0 10px 0;
+        top: -8px;
+        content: '';
+        position: relative;
+
+        &::after {
+            content: 'weak';
+        }
+    }
+    &__pswdMedium {
+        color: #f3eb51;
+        margin: 0 0 10px 0;
+        top: -8px;
+        content: '';
+        position: relative;
+
+        &::after {
+            content: 'medium';
+        }
+    }
+    &__pswdStrong {
+        color: #5bec64;
+        margin: 0 0 10px 0;
+        top: -8px;
+        content: '';
+        position: relative;
+
+        &::after {
+            content: 'strong';
+        }
+    }
+
+    &__pswdnotMatch {
+        color: #b11010;
+        margin: 0 0 10px 0;
+        top: -8px;
+        content: '';
+        position: relative;
+
+        &::after {
+            content: 'do not match';
+        }
+    }
+
+    &__pswdMatch {
+        color: #5bec64;
+        margin: 0 0 10px 0;
+        top: -8px;
+        content: '';
+        position: relative;
+
+        &::after {
+            content: 'match';
+        }
+    }
+}

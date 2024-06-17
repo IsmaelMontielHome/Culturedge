@@ -1,0 +1,152 @@
+.all-reaction {
+  display: flex;
+  position: sticky;
+  z-index: 2;
+  background: #fff;
+  padding: 5px;
+  border: 1px solid #ededed;
+  border-radius: 20px;
+  display: none;
+  top: 0;
+  width: fit-content;
+}
+
+.reaction {
+  width: 50px;
+  height: 50px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.react-con {
+  color: #aca9a9;
+  padding-top: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(4, 4, 4, 0.3);
+  background: #fff;
+  width: 55px;
+  display: inline-block;
+
+  .like-action {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    i {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+  }
+}
+
+.actions-show > .react-con {
+  color: #aca9a9;
+  padding-top: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(4, 4, 4, 0.3);
+  background: #fff;
+  width: 55px;
+  display: inline-block;
+  margin: 20px 0px 0px 20px;
+
+  .like-action {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    i {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+  }
+}
+
+.react-con:hover {
+  color: #1185c4 !important;
+  transition: 0.3s;
+  box-shadow: 0 1px 2px rgba(7, 7, 7, 0.6);
+}
+
+.reaction:hover {
+  width: 60px;
+  height: 60px;
+  transition: 0.3s;
+}
+
+.reaction-selected {
+  width: 25px;
+  height: 25px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.content {
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 20px;
+  border: 1px solid #c8c8c8;
+}
+
+/* comment */
+.comment {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.user-info i {
+  margin-right: 5px;
+}
+
+.comment-content {
+  margin-bottom: 5px;
+}
+
+.comment-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.comment-actions button {
+  margin-left: 5px;
+}
+
+.child-comments {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.comments-view-more,
+.comments-view-less {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.comment-edit-textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+}
+
+.child-comments {
+  display: none;
+}
+
+.likes > img {
+  width: 20px;
+  height: 20px;
+  padding-right: 5px;
+}

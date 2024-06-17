@@ -1,0 +1,207 @@
+nav {
+  z-index: 1;
+  margin-top: px(15);
+  position: fixed;
+  width: 14%;
+  height: 93%;
+  overflow-y: auto; 
+  font-size: 25px; 
+  box-shadow: 0 0 5px $font_w2; 
+  background-color: $section-font;
+  transition: width 0.3s ease;
+  font-family: "Poppins", sans-serif;
+
+  .line {
+    @include line($border);
+  }
+  
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
+    li {
+      color: $font-text;
+      text-decoration: none;
+      display: flex;
+      
+      .selector {
+        width: 5%;
+        height: auto;
+        background-color: $font_light3;
+        display: none
+
+      }
+
+      > .category {
+        @include nav();
+        
+        i {
+          margin-right: 10px;
+        }
+      } 
+      
+      h3 {
+        margin: 0;
+        color: $font-text;
+      }
+    }
+
+    .categories {
+      color: $font-text;
+      @include nav();
+      padding: 0;
+      margin: 10px;
+
+      p{
+        margin: 0;
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .spinner {
+      height: 2rem;
+      margin: 8px auto;
+      width: 2rem;
+    }
+  }
+}
+
+.list:hover {
+  transition: background-color 0.3s ease;
+  background-color: $font-hover; 
+  color: $font-txhover;
+  
+   li.category p {
+    color: $font-txhover;
+  }
+
+  .selector {
+    display: block;
+    transition: background-color 0.5s ease;
+  }
+} 
+
+@include tablet {
+  nav {
+    font-size: 13px;
+
+    .subcategory > p {
+      font-size: 13px;
+    }
+
+    ul.icons .category .categori {
+      margin-top: 4px;
+    }
+  }
+
+  
+  
+}
+
+.category{
+  display: flex;
+  padding: 0;
+  margin-left: 20px;
+
+  p {
+    margin: 0;
+  }
+  .categori {
+    margin-top: 7px;
+    padding-left: 5%;
+  }
+}
+
+
+@include mobile {
+  nav {
+    width: 100%;
+    height: 35%;
+    position: fixed; 
+    top: 0;
+    li.category span.cate {
+      margin: 0;
+    }
+  }
+
+  .category {
+    > p {
+      margin: 0;
+      font-size: 20px;
+    }
+  } 
+
+  .line {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-top: $border; 
+  }
+}
+
+//works with the js nav
+.hide-nav {
+  width: 80px;
+
+  .list {
+    border-radius: 0;
+  }
+
+  i {
+    width: 100%;
+    font-size: 40px;
+  }
+
+  p, .line, h3 {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.subcategories {
+  color: $font_w1;
+  display: none;
+  flex-direction: column;
+  margin: 0;
+  transition: transform 0.3s ease;
+
+  a {
+    color: $font_w1;
+    text-decoration: none;
+    color: $font_w1; 
+
+    > span {
+      margin-right: 15px;
+    }
+  }
+
+  .subcategory {
+    @include nav();
+
+    i {
+      margin-right: 10px;
+    }
+    > p {
+      margin: 0;
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.show_cat {
+  display: flex;
+  padding: 0;
+}
+
+.list a {
+  width: 100%;
+}

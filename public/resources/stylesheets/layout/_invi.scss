@@ -1,0 +1,93 @@
+@include mobile {
+  .main-container {
+    margin-left: 0;
+    flex-direction: column-reverse;
+  }
+}
+
+main {
+  margin-top: px(12);
+  flex: 56%;
+  margin: 78px 25% 0 12%;
+  text-align: center; 
+
+  .main {
+    margin: 0 10% 0 20%;
+  }
+
+  .main .cols__container .contents .lists {
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+  }
+  .main .cols__container .contents .lists li {
+    display: flex;
+  }
+  .main .cols__container .contents .lists i {
+    font-size: 1.3rem;
+    padding-right: 10px;
+  }
+  .main .cols__container .right__col .menu-user {
+    display: flex;
+    align-items: center;
+    padding: 0 0 30px 0;
+    flex-direction: column;
+  }
+  .main .cols__container .right__col .menu-user .lists {
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+    padding: 30px 0 0 0;
+  }
+  .main .cols__container .right__col .menu-user .lists li a {
+    text-transform: uppercase;
+    color: #818181;
+  }
+  .main .cols__container .right__col .menu-user .lists li a:hover{
+    cursor: pointer;
+  }
+  .main .cols__container .right__col .menu-user .lists .active {
+    color: #1d1d1d;
+    font-weight: 600;
+  }
+
+  @include tablet {
+    margin: 70px 30% 0 14%;
+
+    .main {
+      margin: 0 0 0 5%;
+    }
+  }
+
+  @include mobile {
+    margin: 0;
+    flex: 1;
+    .main {
+      margin-left: 0;
+    }
+  } 
+
+}
+
+.between{
+  display: flex; 
+  justify-content: flex-end !important;
+}
+
+//part of chats
+.postbox {
+  margin-top: 75px;
+  position: fixed;
+  top: 0; /* Ajusta la posición verticalmente según sea necesario */
+  right: 0; /* Ajusta la posición horizontalmente según sea necesario */
+  width: 25%; /* Ajusta el ancho del elemento según sea necesario */
+  text-align: center;
+  color: $font_w1;
+  
+  @include mobile {
+    position: static; /* Vuelve a la posición normal en dispositivos móviles */
+    width: 100%; /* Ancho completo en dispositivos móviles */
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,38 @@
+//Abstracts 
+@import 
+  'abstracts/variables',
+  'abstracts/mixins',
+  'abstracts/fuctions',
+  'abstracts/animations'; 
+
+@import
+  'base/base';
+
+@import 
+  'page/login',
+  'page/register',
+  'page/verify',
+  'page/error',
+  'page/error',
+  'page/formVerify',
+  'page/admin',
+  'page/profile';
+
+@import
+  'layout/header',
+  'layout/invi';
+
+@import
+  'components/nav',
+  'components/cards',
+  'components/chats',
+  'components/comments',
+  'components/form_posts',
+  'components/input',
+  'components/spinner',
+  'components/reactions',
+  'components/alerts',
+  'components/carousel',
+  'components/about-us',
+  'components/questions',
+  'components/condiction';

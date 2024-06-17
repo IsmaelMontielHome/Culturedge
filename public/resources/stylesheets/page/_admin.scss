@@ -1,0 +1,408 @@
+.general-data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.boxed-data {
+  background-color: $font_w;
+  box-shadow: $shadowBox;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 25px;
+  margin-bottom: 26px;
+  border-radius: 15px;
+  width: 30%;
+  height: 10rem;
+
+  img {
+    width: 80px;
+    margin-right: 20px;
+  }
+
+  p{
+    margin: 0;
+    font-size: 35px;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .statistics {
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 600;
+    color: $font_b;
+  }
+
+  &:nth-child(1) {
+    color: $data-color1; 
+  }
+
+  &:nth-child(2) {
+    color: $data-color2; 
+  }
+
+  &:nth-child(3) {
+    color: $data-color3; 
+  }
+
+  &:nth-child(4) {
+    color: $data-color4; 
+  }
+
+  &:nth-child(5) {
+    color: $data-color5; 
+  }
+
+  &:nth-child(6) {
+    color: $data-color6; 
+  }
+}
+
+
+.chart-container {
+  padding: 20px;
+  width: 50%;
+  height: auto;
+  background-color: $font_w;
+  box-shadow: $shadowBox;
+  border-radius: 20px;
+  margin: 0 0 2% 0;
+
+  h2 {
+    text-align: left;
+  }
+
+  .redirect-table {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+
+    a {
+      padding: 10px;
+      border: 2px solid $font_w6;
+      border-radius: 8px;
+      color: $font_b;
+      font-weight: 600;
+
+      &:hover {
+        background-color: $back_color1;
+        cursor: pointer;
+        color: $font_w;
+      }
+    }
+  }
+
+}
+
+.data-graphics {
+  display: flex;
+  gap: 40px;
+}
+
+.table-dashboard {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  min-width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  text-align: left;
+
+  tbody tr:nth-of-type(even) {
+    background-color: font_6;
+  }
+
+  tbody tr:hover {
+      background-color: $font_w5;
+  }
+
+  td {
+    &:nth-child(3) {
+      font-size: 1.1rem;
+    }
+  }
+
+}
+
+.table-dashboard thead tr {
+  color: $gray_2;
+  font-weight: bold;
+}
+
+.table-dashboard th,
+.table-dashboard td {
+  padding: 12px 15px;
+  font-size: 1.1rem;
+}
+
+canvas {
+  display: block;
+  max-width: 100%;
+  min-height: 320px;
+}
+
+.body_wrapper {
+  margin: 2rem 0 0 7%;
+  width: 80vw;
+  height: auto;
+  overflow: hidden;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu-user {
+
+  .buttonGreen {
+    margin-top: 0;
+    background-color: $data-color3;
+  }
+
+  .icon-button {
+    font-size: 20px;
+  }
+}
+
+.welcome-admin {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 600;
+    color:$gray_3;
+    margin: 0 0 20px 0;
+  }
+  
+  h6 {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+  }
+}
+
+.section-admin {
+  margin: 50px 0;
+}
+
+
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 40px 0 10px;
+  font-size: 0.9em;
+  min-width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: $shadowTable2;
+  &-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+}
+
+.content-table thead tr {
+  background-color: $font_light12;
+  color: $font_b;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+  font-size: 1.1rem;
+}
+
+td {
+  &:nth-child(3) {
+    font-size: 1.5rem;
+  }
+
+  &:nth-child(4) {
+    font-size: 1.3rem;
+  }
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid $font_w4;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: $font_w5;
+}
+
+.buttonGreen {
+  padding: 0.8rem 1.2rem;
+  border: 0;
+  transition: all 150ms ease-in-out;
+  border-radius: 14px;
+  box-shadow: $shadowButton;
+  color: $font_b;
+  font-weight: 600;
+  background-color: $green5;
+
+  i {
+    font-size: 27px;
+    color: $font_w;
+  }
+}
+
+.buttonBlack {
+  padding: 0.8rem 1.2rem;
+  border: 0;
+  transition: all 150ms ease-in-out;
+  border-radius: 14px;
+  box-shadow: $shadowButton;
+  color: $font_b;
+  font-weight: 600;
+  background-color: $font_b;
+
+  i {
+    font-size: 27px;
+    color: $font_w;
+  }
+}
+
+.buttonRed {
+  padding: 0.8rem 1.2rem;
+  border: 0;
+  transition: all 150ms ease-in-out;
+  border-radius: 14px;
+  box-shadow: $shadowButton;
+  color: $font_b;
+  font-weight: 600;
+  background-color: $col_red;
+
+  i {
+    font-size: 27px;
+    color: $font_w;
+  }
+}
+
+.buttonBlue {
+  padding: 0.8rem 1.2rem;
+  border: 0;
+  transition: all 150ms ease-in-out;
+  border-radius: 14px;
+  box-shadow: $shadowButton;
+  color: $font_b;
+  font-weight: 600;
+  background-color: $data-color7;
+
+  i {
+    font-size: 27px;
+    color: $font_w;
+  }
+}
+
+.buttonGreen:hover , .buttonRed:hover , .buttonBlue:hover, .buttonBlack:hover {
+  filter: brightness(0.8);
+  transform: scale(.95);
+  cursor: pointer;
+}
+
+.adminMenu{
+  color: inherit;
+  display: grid;
+
+  &-modal {
+    background-color: $section-font;
+    border: 1px solid $font_w1;
+    margin-top: 20px;
+    width: 70%;
+  }
+
+  &-showpost {
+    text-align: left;
+    width: 100%;
+  }
+  
+  &-show {
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    box-shadow: 0 0 5px $font_w2;
+    color: $font_b4;
+    margin: 20px auto;
+    animation: aparecer 1s ease forwards; 
+  }
+  
+  &-header {
+    align-items: center;
+    display: flex;
+    padding: 10px 0;
+
+    img {
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+    }
+
+    h4 {
+      font-size: 2rem;
+      text-align: left;
+    }
+
+    p {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+  }
+}
+
+@include tablet {
+  .general-data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+  .chart-container {
+    width: 92%;
+    flex-direction: column;
+    margin: 0 0 0 4%;
+  }
+
+  .boxed-data {
+    width: 100%;
+  }
+
+  .data-graphics {
+    flex-direction: column;
+  }
+}
+
+@include mobile {
+
+  .body_wrapper {
+    margin: 6rem 0 0 4%;
+    width: 95vw;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .welcome-admin {
+    width: 100%;
+  
+    h1 {
+      font-size: 20px;
+    }
+  }
+}

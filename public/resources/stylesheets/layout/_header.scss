@@ -1,0 +1,364 @@
+header {
+  height: px(15);
+  background-color: $section-font;
+  color: $font-text;
+  box-shadow:  $bor_fond;
+  z-index: 2;
+  position: fixed; 
+  width: 100%; 
+  transition: top 0.3s; 
+  display: flex;
+  align-items: center;
+
+  img {
+    width: px(10);
+    height:px(10);
+  }
+
+  .logo {
+    align-items: center;
+    display: flex;
+    padding-left: 10px;
+  }
+
+  .btn-console {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    background-color: #9bd979;
+    border-radius: 40px;
+    justify-content: center;
+    margin: 0 5px 0 0;
+
+    i {
+      font-size: 30px;
+      padding: 2px 6px 0 0;
+    }
+
+    &:hover {
+      background-color: #59923a;
+      color: $font_w;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+  }
+}
+
+h2 {
+  color: $font-text;
+}
+
+.menu {
+  font-size: px(10);
+  margin-left: px(4);
+  cursor: pointer;
+  padding-right: px(8);
+}
+
+.seeker {
+  display: flex;
+  align-items: center;
+  border-radius: px(5); 
+  @include card ();
+  margin: auto auto auto 15%;
+  width: 30%;
+
+  > button {
+    background-color: $section-font;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    > i{
+      text-align: center;
+      font-size: 25px;
+      color: $font-text;
+      
+    }
+  }
+
+  input.cont[type="search"] {
+    width: 100%;
+    flex: 1;
+    position: relative;
+    outline: none;
+    color: $font_b2;
+    background-color: $section-font;
+    border: 1px solid $section-font;
+    margin: 5px 5px 5px 0;
+    font-size: 20px;
+  }
+}
+
+header .seeker .search {
+  margin: 5px 0 0 7px;
+  font-size: 25px;
+}
+
+@include mobile {
+
+  .menu {
+    padding-right: 0;
+  }
+
+  .seeker {
+    margin: auto;
+  }
+}
+
+@media (max-width:500px) {
+  h2 {
+    display: none;
+  }
+}
+
+
+
+.login {
+  @include card();
+  border-radius: 20px;
+  margin-right: 20px;
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  a, input {
+    color: $font-text;
+    font-size: 25px;
+    margin: 10px;
+    text-decoration: none;
+  }
+
+  input {
+    margin: 0 10px;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  &:hover {
+    background-color: $font_b;
+    animation: shake 0.5s ease-in-out infinite;
+    
+    & > a, input {
+      color: $font_w;
+    }
+  }
+}
+
+.text {
+  &-start {
+    text-align: start;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-end {
+    text-align: end;
+  }
+
+  &-justify {
+    text-align: justify;
+  }
+}
+
+.btn-notifications {
+  background-color: $section-font;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  font-size: 2.5rem;
+
+  .notifications-count {
+    align-items: center;
+    background-color: lighten($col_red, 30%);
+    border-radius: 25px;
+    color: $col_red2;
+    display: flex;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 20px;
+    justify-content: center;
+    position: absolute;
+    transform: translate(20px, -0);
+    width: 20px;
+  }
+}
+
+.notification {
+  display: flex;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid darken($font_w1, 5%);
+  }
+
+  &-causer {
+    align-items: end;
+    display: flex;
+    gap: 5px;
+
+    img {
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+    }
+
+    &-info {
+      align-items: start;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      h5 {
+        font-size: 1.5rem;
+      }
+  
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &-event {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+
+    &-see {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  &-date {
+    font-size: 0.8rem;
+  }
+}
+
+.btn-userMenu {
+  border-radius: 50%;
+  background-color: $section-font;
+  margin: 10px 30px;
+  border: 2px solid $font-text;
+  cursor: pointer;
+}
+
+.userMenu {
+  background: transparent !important;
+  color: inherit;
+  display: grid;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: 1fr 1fr !important;
+
+  &-modal {
+    background-color: $section-font;
+    border: 1px solid $font_w1;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    margin-top: 75px;
+    place-self: start end !important;
+  }
+  
+  &-header {
+    align-items: center;
+    display: flex;
+    padding: 10px 0;
+
+    img {
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+    }
+
+    h4 {
+      font-size: 2rem;
+      text-align: left;
+    }
+
+    p {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+  }
+
+  &-list {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    max-height: 18.75rem;
+    overflow: auto;
+
+    &-item {
+      cursor: pointer;
+
+      &:hover {
+        background-color: $font-hover;
+        border-radius: px(1);
+      }
+
+      &.spinner-container {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+
+        .spinner {
+          height: 4rem;
+          width: 4rem;
+        }
+      }
+
+      a {
+        font-size: 20px;
+        padding: 4px 0;
+      }
+    }
+  }
+
+  &-tabs {
+    border-bottom: 1px solid darken($font_w1, 5%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    margin-bottom: 1.25em;
+
+    &-item {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      padding: 4px 0;
+
+      &:hover:not(.active) {
+        background-color: darken($section-font, 2%);
+      }
+
+      &.active {
+        border-color: darken($font_w1, 5%) darken($font_w1, 5%) $section-font;
+        margin-bottom: -1px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .userMenu {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr 1fr !important;
+  
+    &-modal {
+      grid-column: 1 !important;
+      grid-row: 1 !important;
+      place-self: start center !important;
+      width: initial !important;
+    }
+  }
+}
+

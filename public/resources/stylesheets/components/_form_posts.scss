@@ -1,0 +1,105 @@
+form .box {
+  margin: 1rem 0;
+  max-width: none;
+}
+
+.box .user {
+  justify-content: space-between;
+  padding: 1rem;
+
+  &__avatar {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding-left: 1rem;
+    }
+
+    i {
+      font-size: 2rem;
+    }
+  }
+
+  &__date p {
+    font-size: 1rem;
+  }
+}
+
+.text .field {
+  display: flex;
+  flex-direction: row-reverse;
+
+  .attach-file {
+    color: $gray_1;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 14px;
+    position: absolute;
+
+    &:hover {
+      color: darken($gray_1, 10%);
+    }
+  }
+
+  input[type="button"] {
+    font-weight: bold;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+
+  input, textarea, select {
+    background: $backinput;
+    border-radius: 5px;
+    border: none;
+    color: $font_b4;
+    font-family: $font_family_inputs;
+    font-size: 1rem;
+    margin: 0 0 1rem;
+    padding: 1rem;
+    width: 100%;
+
+    option {
+      background: $backinput;
+      color: $font_b4;
+    }
+  }
+}
+
+.image-edit {
+  position: relative;
+  
+  .remove-image {
+    color: $col_red;
+    cursor: pointer;
+    font-size: 4rem;
+    position: absolute;
+    right: 2rem;
+    top: 0;
+    user-select: none;
+    z-index: 1;
+  }
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row-reverse;
+
+  .btn {
+    background-color: darken($backinput, 10%);
+    border-radius: 10px;
+    border: none;
+    color: $font_b;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    transition: background-color 100ms ease-in-out;
+  
+    &:hover {
+      background-color: darken($backinput, 30%);
+    }
+  }
+}
