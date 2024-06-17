@@ -10,7 +10,7 @@
                 <div class="accordion-content">
                     <p>To change your username, you need to log in to "SIGN UP." 
                         After logging in, click on the user icon and go to "PROFILE." Once you are in your user profile, 
-                        you can edit your username in the "edit profile" section.
+                        you can edit your username in the "edit profile" section."xd"
                     </p>
                 </div>
             </div>
